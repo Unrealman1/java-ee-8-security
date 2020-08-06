@@ -19,7 +19,7 @@ public class Pop extends HttpServlet {
     protected SecurityContext securityContext;
 
     @Inject
-    private Service service;
+    private ServiceTest service;
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

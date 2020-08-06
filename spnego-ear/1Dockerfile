@@ -1,0 +1,8 @@
+FROM camunda/camunda-bpm-platform:wildfly-latest
+RUN /opt/jboss/wildfly/bin/add-user.sh admin admin --silent
+COPY ./script.sh /opt/script.sh
+USER root
+RUN chmod +x /opt/script.sh
+COPY ./wildfly-config/postgresql-42.2.14.jar /opt/postgresql-42.2.14.jar
+RUN /opt/script.sh
+ADD ./aggregate/target/aggregate-1.0-SNAPSHOT.ear /opt/jboss/wildfly/standalone/deployments/

@@ -6,9 +6,9 @@ import org.jboss.ejb3.annotation.SecurityDomain;
 import javax.ejb.Stateless;
 
 @Stateless
-//@SecurityDomain("other")
-public class Service {
+@SecurityDomain("other")
+public class ServiceEJB {
     public String getMessage(){
-        return "Yay from Ejb";
+        return "From Ejb Module";
     }
 }

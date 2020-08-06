@@ -16,7 +16,7 @@
         <module>app-auth-custom-no-store</module>
         <module>spnego</module>
         <module>custom-role-decoder</module>
-        <module>spnego-parent-test</module>
+        <module>spnego-ear</module>
     </modules>
 
 

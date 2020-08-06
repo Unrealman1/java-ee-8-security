@@ -1,0 +1,21 @@
+version: "3.7"
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+#    ports:
+#      - 8080:8080
+#      - 9090:9090
+#      - 5432:5432
+    expose:
+      - "8080"
+      - "8000"
+      - "9404"
+      - "9990"
+    env_file:
+      - ./wildfly-config/db-env
+    environment:
+      - m 4g
+#    volumes:
+#    - ./wildfly-config/script.sh:/opt/script.sh
